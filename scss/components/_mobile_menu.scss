@@ -1,0 +1,46 @@
+.mobile-hamburger-menu {
+	display: block;
+	padding-right: 1rem;
+	@include mx-smartphone-large {
+		display: none;
+	}
+}
+
+.mobile-menu-wrapper {
+}
+
+.mobile-menu-wrapper.runFadeUpAnimation {
+	display: block;
+	animation: fadeIn;
+	animation-fill-mode: forwards;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	pointer-events: all;
+}
+
+.mobile-menu-wrapper.runFadeDownAnimation {
+	display: block;
+	animation: fadeOut;
+	animation-fill-mode: forwards;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	pointer-events: none;
+}
+
+@keyframes SlideIn {
+	0% {
+		transform: translateX(125%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes SlideOut {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(125%);
+	}
+}

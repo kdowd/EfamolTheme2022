@@ -1,0 +1,81 @@
+.site-footer {
+	background-color: $site_palette_main;
+	color: white;
+	display: flex;
+	padding: 3rem 2rem;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	> section {
+		display: grid;
+		align-items: flex-start;
+		gap: 2rem 2rem;
+		grid-template-columns: repeat(1, 1fr);
+		place-items: flex-start;
+		// grid-auto-rows: minmax(250px, auto);
+
+		.footer-logo-wrap {
+			align-self: center;
+		}
+
+		> div {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+
+				.footer-menu-heading {
+					color: $site_palette_gold;
+					margin-bottom: 1rem;
+				}
+
+				li {
+					color: $site_palette_white;
+					padding: 0.25rem 0;
+				}
+			}
+		}
+
+		.social-icons-wrap {
+			> a:first-of-type {
+				margin-right: 0.66rem;
+			}
+		}
+		// the round image / icon
+		> div:last-of-type {
+			margin: 2rem auto;
+			justify-self: center;
+
+			@include mx-tablet {
+				margin: unset;
+				justify-self: flex-start;
+				align-self: center;
+			}
+		}
+
+		@include mx-tablet {
+			grid-template-columns: repeat(5, 1fr);
+			place-items: stretch;
+		}
+	}
+
+	// the block of text at the end of section
+	> div:last-of-type {
+		margin: 2rem auto;
+		width: auto;
+		text-align: center;
+		@include mx-tablet {
+			margin: 2rem 0 1rem 0;
+			width: 60%;
+		}
+	}
+
+	@include mx-tablet {
+		grid-template-columns: repeat(5, 1fr);
+		padding: 2rem;
+	}
+}

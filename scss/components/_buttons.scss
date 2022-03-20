@@ -1,0 +1,43 @@
+.basic-button {
+	color: $site_palette_white;
+	background-color: $site_palette_main;
+	border-radius: 12px;
+	padding: 1em 2em;
+}
+
+.button-add-shadow {
+	opacity: 0.2;
+}
+
+#override .gb-button {
+	position: relative;
+	transform-style: preserve-3d;
+	background-color: $site_palette_main;
+	padding: 0.8rem 2.2rem;
+	font-family: $font__main !important;
+	text-transform: uppercase;
+}
+
+.gb-button::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 16%;
+	left: 4%;
+	background-color: $site_palette_gold;
+	border-radius: inherit;
+	transform: translateZ(-1px);
+}
+
+#override .force-white-shadow::before {
+	background-color: white;
+}
+
+.center-button-wrap {
+	@include flex-center;
+}
+
+.single-blogs .center-button-wrap {
+	padding: 4rem 0;
+}

@@ -1,0 +1,71 @@
+.section-wellness {
+	background-color: $wellness-background;
+
+	.wellness-section {
+		padding: 1rem 3rem;
+		display: block;
+
+		gap: 4rem;
+		.item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-basis: 25%;
+			text-align: center;
+			p {
+				font-size: 0.8rem;
+			}
+		}
+	}
+	@include mx-tablet {
+		.wellness-section {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+.product-information-panel {
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+	// width: 310px;
+
+	.first-group,
+	.second-group,
+	.third-group {
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		margin-bottom: 1rem;
+		line-height: 1.5rem;
+	}
+	.product-icon {
+		width: 32px;
+		height: auto;
+		margin: 0;
+
+		&:nth-child(2) {
+			align-self: center;
+			width: 26px;
+		}
+	}
+	ul {
+		padding-left: 0;
+		list-style-position: inside;
+	}
+
+	.icons-group {
+		.wp-block-group__inner-container {
+			display: flex;
+			justify-content: flex-start;
+			gap: 0.8rem;
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			color: red;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+// .width: max(18ch, 55%);
+// 	font-size: 1.4rem;
+// 	font-family: $font__main;
+
+.science-block {
+	padding: 3% 3%;
+	.gb-cta-content > h2 {
+		font-size: 0.5rem;
+		font-family: $font__heading-special;
+		margin-top: 0;
+	}
+
+	.gb-cta-text p {
+		width: max(34ch, 68%);
+		margin: 1rem auto;
+		font-family: $font__main;
+		color: $site_palette_black;
+		text-transform: none;
+		line-height: 1.8rem;
+		font-weight: lighter;
+	}
+}

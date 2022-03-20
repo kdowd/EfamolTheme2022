@@ -1,0 +1,99 @@
+/* Accordion styles */
+.other-content {
+	// margin: 2rem auto;
+	width: min(100%, 900px);
+	margin: 0 auto;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.info-tabs {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	box-sizing: border-box;
+	width: 100%;
+	color: $site_palette_white;
+
+	margin: 0;
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	.tab {
+		width: inherit;
+		color: currentColor;
+		overflow: hidden;
+		border: 1px solid $site_palette_main;
+		border-radius: 0;
+		margin-bottom: 1rem;
+		background-color: $site_palette_main;
+	}
+}
+
+.tab-label {
+	display: flex;
+
+	justify-content: space-between;
+	padding: 0.6rem 1em;
+	background: transparent;
+	font-weight: bold;
+	cursor: pointer;
+	/* Icon */
+
+	&::after {
+		content: '\271A';
+		transition: all 0.15s;
+		transform-origin: center;
+		color: $site_palette_white;
+	}
+}
+
+/* //https://www.toptal.com/designers/htmlarrows/symbols/ */
+/* https://www.toptal.com/designers/htmlarrows/symbols/ */
+
+.tab-content {
+	max-height: 0;
+	padding: 0 1em;
+	color: $product-info-gray;
+	background-color: white;
+	transition: all 0.35s;
+}
+
+.tab-content p {
+	margin: 0;
+}
+
+.tab-close {
+	display: flex;
+	justify-content: flex-end;
+	padding: inherit;
+	font-size: 0.75em;
+	cursor: pointer;
+}
+
+input:checked + .tab-label::after {
+	content: '\2759';
+	transform: rotate(90deg) translateY(5px);
+	transform-origin: center;
+}
+
+input:checked ~ .tab-content {
+	max-height: 100vh;
+	padding: 1em;
+}
+
+/* //info-tabs>.tab */
+.tab-opened {
+	border: 1px solid lightgrey;
+	background-color: white;
+}
+
+.tab-closed {
+	// background color controlled from taxonomies sass
+	border: 1px solid lightgrey;
+	border-color: transparent;
+}

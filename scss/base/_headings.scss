@@ -1,0 +1,28 @@
+.heading {
+	text-align: center;
+	margin: 2.2rem 0;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.products-hero-text-group {
+	margin: 0 auto;
+	color: $site_palette_main;
+	p {
+		width: 24ch;
+
+		@include mx-smartphone-large {
+			width: 60ch;
+		}
+	}
+
+	.hero-headline {
+		width: 90%;
+		line-height: 3.6rem;
+		font-family: $font__heading-special;
+	}
+
+	@include mx-tablet {
+		margin-left: 3rem;
+	}
+}

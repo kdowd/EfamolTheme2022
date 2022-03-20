@@ -1,0 +1,63 @@
+$font__main: 'Poppins', sans-serif;
+$font__heading-normal: 'Spectral', serif;
+$font__heading-special: serif;
+$font__code: monaco, consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+
+body {
+	font-family: $font__main;
+}
+
+.hero-heading {
+	font-family: $font__heading-normal;
+	color: $site_palette_main;
+	text-transform: uppercase;
+	font-size: 2.6rem;
+}
+
+.body-text {
+	color: #9c9c9c;
+
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.gold {
+	color: $site_palette_gold;
+}
+.home-hero-text {
+	font-weight: 500;
+	line-height: 2.8rem;
+	// font-family: $font__heading-special;
+	// padding: 0.5% 2%;
+
+	@include mx-smartphone {
+		line-height: 4rem;
+	}
+}
+
+.text-centered {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-18-70 {
+	width: max(18ch, 55%);
+	font-size: 1.4rem;
+	font-family: $font__main;
+}
+
+.clamped-50 {
+	width: clamp(18ch, 50%, 100ch);
+}
+.clamped-75 {
+	width: clamp(18ch, 75%, 90ch);
+}
+
+.clamped-140 {
+	width: clamp(18ch, 80%, 140ch);
+}

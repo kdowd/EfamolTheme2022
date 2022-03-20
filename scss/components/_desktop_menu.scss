@@ -1,0 +1,51 @@
+.site-header {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	background-color: $site_background_col;
+	box-shadow: #0a0a0a1a 0 4px 4px -4px;
+	.site-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: auto;
+		width: min(66%, 383px);
+		z-index: 200;
+	}
+
+	nav {
+		@include flex-right;
+
+		ul.desktop-menu {
+			background-color: transparent;
+			display: none;
+			justify-content: flex-end;
+			align-items: stretch;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			> li {
+				display: flex;
+				align-items: center;
+
+				&:hover {
+					background-color: $menu_rollover_background_col;
+				}
+			}
+
+			> li:last-of-type {
+				margin-right: 8%;
+			}
+
+			@include mx-smartphone-large {
+				display: flex;
+			}
+		}
+	}
+}
+
+.current-menu-item {
+	background-color: $menu_rollover_background_col;
+}

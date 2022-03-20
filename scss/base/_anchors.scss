@@ -1,0 +1,26 @@
+a {
+	text-decoration: none;
+	color: $site_background_col;
+}
+
+a:hover {
+	color: mix($site_palette_main, $site_background_col, 50%);
+}
+
+.site-header a {
+	color: $anchor_text_colour;
+	padding: 1.8rem 2rem;
+	text-align: center;
+	font-size: 1.4rem;
+
+	&:hover {
+		color: $site_palette_main;
+	}
+}
+
+.blog-copy-wrapper {
+	a {
+		color: black;
+		text-decoration: underline;
+	}
+}

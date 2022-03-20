@@ -1,0 +1,8 @@
+#override .blog-copy-wrapper {
+	width: 92%;
+	margin: 0 auto;
+
+	@include mx-desktop {
+		width: 50%;
+	}
+}

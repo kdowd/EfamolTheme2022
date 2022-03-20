@@ -1,0 +1,26 @@
+.section.section-blog-summary {
+	> div:first-of-type {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		> div:first-of-type {
+			flex-basis: 47%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			min-height: 300px;
+		}
+
+		> div:last-of-type {
+			background-color: $site_palette_gold;
+			flex-basis: 53%;
+			display: flex;
+			align-items: center;
+		}
+
+		@include mx-tablet {
+			flex-direction: row;
+		}
+	}
+}

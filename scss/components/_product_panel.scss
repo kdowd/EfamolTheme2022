@@ -1,0 +1,12 @@
+.product-info-panel {
+	justify-content: center;
+	max-width: 1000px;
+
+	.wp-block-column {
+		display: flex;
+		justify-content: center;
+	}
+
+	.wp-block-column:first-of-type {
+	}
+}

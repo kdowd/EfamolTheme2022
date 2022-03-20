@@ -1,0 +1,114 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin responsive-img($prop) {
+	max-width: $prop;
+	height: auto;
+	display: block;
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+@mixin thin-bottom-shadow() {
+	-webkit-box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+	box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+//  @include font-size(12, 18, 1.2);
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+	font-size: $font-size * 1px;
+	// font-size: $font-size * 0.1rem;
+	// example using rem values and 62.5% font-size so 1rem = 10px
+
+	@if $line-height==normal {
+		line-height: normal;
+	} @else {
+		line-height: $line-height / $font-size;
+	}
+
+	@if $letter-spacing==normal {
+		letter-spacing: normal;
+	} @else {
+		letter-spacing: #{$letter-spacing / $font-size}em;
+	}
+}
+
+@mixin cover-background {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin top-rounded-element($amount) {
+	border-top-left-radius: $amount;
+	border-top-right-radius: $amount;
+}
+
+@mixin right-rounded-element($amount) {
+	border-top-right-radius: $amount * 1px;
+}
+
+@mixin mx-smartphone {
+	@media only screen and (min-width: $smartphone) {
+		@content;
+	}
+}
+
+@mixin mx-smartphone-large {
+	@media only screen and (min-width: $smartphone-large) {
+		@content;
+	}
+}
+
+@mixin mx-tablet {
+	@media only screen and (min-width: $tablet) {
+		@content;
+	}
+}
+
+//1200
+@mixin mx-desktop {
+	@media only screen and (min-width: $desktop) {
+		@content;
+	}
+}
+
+//1400
+@mixin mx-desktop-large {
+	@media only screen and (min-width: $desktop-large) {
+		@content;
+	}
+}
+@mixin mx-popup {
+	@media only screen and (min-width: 900px) {
+		@content;
+	}
+}
+
+/* Convert PX units to EMs.
+Ex: margin-right: pem(16);
+*/
+// @function pem($pxval, $base: $baseFontSize) {
+// 	@return #{$pxval / $base}em;
+// }
+
+// .grid-on-left {
+// 	@include grid-center-last(2);
+// }
+
+// .grid-on-right {
+// 	@include grid-center-last(3);
+// }
