@@ -5,10 +5,11 @@ if (!defined('CODE_BASE')) {
 }
 
 if (!defined('CURRENT_VERSION')) {
-	define('CURRENT_VERSION', '1.0.0');
+	define('CURRENT_VERSION', '1.25');
 }
 
 add_filter('jpeg_quality', function ($arg) {
+	// leave at 100 - tinyPNG will sort this out
 	return 100;
 });
 
