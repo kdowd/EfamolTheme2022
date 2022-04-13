@@ -36,10 +36,10 @@ function scripts() {
 
 function deploy() {
 	var conn = ftp.create({
-		user: 'efamolstaging-kdowd',
-		password: 'ursulaNiamh76!',
-		host: 'efamolstaging.sftp.wpengine.com',
-		dest: '/themes/efamol/',
+		user: '******************',
+		password: '******************',
+		host: '******************',
+		dest: '******************',
 		newer: './',
 		// newerOrDifferentSize: '/themes/efamol/',
 		port: 2222,
