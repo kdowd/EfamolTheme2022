@@ -1,1 +1,0 @@
-{"version":3,"sources":["base/_base.scss","abstracts/_variables.scss"],"names":[],"mappings":"AAAA,KACC,wBCDqB,CDErB,YAAa,CACb,gBAAiB","file":"main.css","sourcesContent":["body {\r\n\tbackground-color: $red;\r\n\tdisplay: flex;\r\n\tmin-height: 100vh;\r\n}\r\n","$red: rgb(218, 47, 40);\r\n"]}
